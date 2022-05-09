@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "aksdror-2354"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "aksdror-2354"
+  template:
+    metadata:
+      labels:
+        app: "aksdror-2354"
+    spec:
+      containers:
+        - name: "aksdror-2354"
+          image: "acrdemo1207.azurecr.io/aksdror"
+          ports:
+          - containerPort: 80
